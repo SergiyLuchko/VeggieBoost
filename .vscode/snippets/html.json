@@ -118,7 +118,7 @@
     "description": "Snippet for simple html svg images"
   },
   "tooltip": {
-  "prefix": "g-tooltip",
+    "prefix": "g-tooltip",
     "body": [
       "<span class=\"tooltip\">",
       "  <button class=\"btn-reset tooltip__btn\" aria-describedby=\"$1\">$2</button>",
@@ -157,5 +157,20 @@
       "</video>"
     ],
     "description": "Snippet for transparent video"
+  },
+  "HTML section": {
+    "prefix": "sect",
+    "body": [
+      "<section class=\"${1:example}\">",
+      "<h2 class=\"visually-hidden\">${2:title}</h2>",
+      "<div class=\"container\">",
+      "<h2 class=\"${1:example}__title\">${2:title}</h2>",
+      "<div class=\"${1:example}__${3:content}\">",
+      "${4:Content}",
+      "</div>",
+      "</div>",
+      "</section>"
+    ],
+    "description": "HTML section"
   }
 }

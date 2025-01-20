@@ -1,1 +1,37 @@
-// ваш код
+.header {
+  padding: 16px 0;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__branding {
+  }
+
+  &__logo {
+    max-width: 142px;
+  }
+
+  &__cart {
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    line-height: 129%;
+    color: var(--black);
+  }
+}
+
+.cart {
+  &__btn {
+  }
+}
