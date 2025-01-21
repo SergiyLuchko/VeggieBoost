@@ -1,0 +1,115 @@
+.organic {
+  margin-bottom: var(--sect-offset);
+  &__title {
+    margin: 0;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  &__text {
+    max-width: 600px;
+
+    margin: 0;
+    margin: 0 auto 40px auto;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 133%;
+    letter-spacing: -0.04em;
+    text-align: center;
+  }
+
+  &__content {
+  }
+
+  &__list {
+    margin-bottom: 44px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 24px;
+  }
+
+  &__item {
+    display: flex;
+    padding: 64px 34px 24px 34px;
+    border-radius: 20px;
+    background-color: var(--light-green);
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    color: var(--black);
+  }
+
+  &__item-title {
+    margin: 0;
+    margin-bottom: 7px;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 119%;
+    letter-spacing: -0.04em;
+  }
+
+  &__item-descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 133%;
+    letter-spacing: -0.02em;
+  }
+
+  &__image {
+    position: relative;
+    margin-bottom: 35px;
+    z-index: 1;
+  }
+
+  &__item-img {
+    margin: 0 auto;
+  }
+
+  &__shadow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    margin: 0 auto;
+    width: 195px;
+    height: 38px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='250' height='94' viewBox='0 0 250 94' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg opacity='0.1' filter='url(%23filter0_f_72_2778)'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M125 66C178.848 66 222.5 57.4934 222.5 47C222.5 36.5066 178.848 28 125 28C71.1522 28 27.5 36.5066 27.5 47C27.5 57.4934 71.1522 66 125 66Z' fill='%23141414' /%3e%3c/g%3e%3cdefs%3e%3cfilter id='filter0_f_72_2778' x='0.317183' y='0.817183' width='249.366' height='92.3656' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3e%3cfeFlood flood-opacity='0' result='BackgroundImageFix' /%3e%3cfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' /%3e%3cfeGaussianBlur stdDeviation='13.5914' result='effect1_foregroundBlur_72_2778' /%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+  &__price {
+    margin: auto 0 0 0;
+
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 133%;
+  }
+
+  &__btn {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 114px;
+    height: 114px;
+    border-radius: 50%;
+    background-color: var(--orange);
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 133%;
+    transform: rotate(-14deg);
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--white);
+  }
+  &__btn-icon {
+    margin-right: 6px;
+  }
+}
