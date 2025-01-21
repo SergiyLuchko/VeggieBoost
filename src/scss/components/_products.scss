@@ -1,0 +1,32 @@
+.products {
+  margin-bottom: var(--sect-offset);
+  &__content {
+    padding: 44px 64px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    border-radius: 80px;
+    background-color: var(--beige);
+    background-image: url("../img/steps-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__image {
+  }
+
+  &__title {
+    margin: 0;
+    max-width: 437px;
+  }
+
+  &__green,
+  &__orange {
+    font-style: italic;
+    color: var(--green);
+  }
+  &__orange {
+    color: var(--orange);
+  }
+}
