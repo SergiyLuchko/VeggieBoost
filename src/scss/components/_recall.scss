@@ -1,0 +1,78 @@
+.recall {
+  margin-bottom: var(--sect-offset);
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 77px;
+  }
+
+  &__action {
+    max-width: 609px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    max-width: 523px;
+    margin: 0;
+    margin-bottom: 80px;
+    font-size: 18px;
+    line-height: 133%;
+  }
+
+  &__input {
+    padding: 15px 15px 15px 24px;
+    border: 1px solid rgba($color: #141414, $alpha: 0.3);
+    border-radius: 100px;
+    width: 350px;
+    height: 48px;
+    color: var(--black);
+    &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 129%;
+      letter-spacing: -0.04em;
+      color: #c1bdbd;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    z-index: 10;
+    margin-left: -100px;
+    border-radius: 100px;
+    padding: 15px 35px;
+    width: 105px;
+    height: 48px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.04em;
+    text-transform: capitalize;
+    color: var(--white);
+    background-color: var(--orange);
+  }
+
+  &__image {
+    border-radius: 80px;
+    background-color: var(--light-green);
+    background-image: url("../img/steps-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__img {
+  }
+}
+.container {
+}
+.heading-1 {
+}
+.input-reset {
+}
+.btn-reset {
+}
