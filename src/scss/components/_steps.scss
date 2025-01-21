@@ -1,0 +1,63 @@
+.steps {
+  margin-bottom: var(--sect-offset);
+
+  &__content {
+    padding: 40px 80px 0 80px;
+    display: flex;
+    border-radius: 80px;
+    background-color: var(--beige);
+    background-image: url("../img/steps-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__img {
+  }
+
+  &__descr {
+    align-self: center;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    max-width: 350px;
+    counter-reset: step;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+    counter-increment: step;
+    &::before {
+      content: counter(step);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      margin-right: 8px;
+      border-radius: 200px;
+      padding: 10px 17px;
+      width: 46px;
+      height: 44px;
+      background: var(--green);
+    }
+  }
+
+  &__text {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 129%;
+  }
+}
