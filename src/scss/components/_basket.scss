@@ -1,0 +1,39 @@
+.basket {
+  margin-bottom: var(--sect-offset);
+  background-color: var(--white);
+  color: var(--black);
+  &__content {
+  }
+
+  &__title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__title {
+    max-width: 614px;
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 104%;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
+
+  &__descr {
+    max-width: 687px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__text {
+    max-width: 353px;
+    font-size: 18px;
+    line-height: 133%;
+  }
+}
+.container {
+}
