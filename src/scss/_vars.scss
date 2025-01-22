@@ -16,4 +16,10 @@
   --beige: #faf3e7;
   --gray: #f3f3f3;
   --white: #fff;
+  @include tablet {
+    --sect-offset: 100px;
+  }
+  @include mobile {
+    --sect-offset: 80px;
+  }
 }
