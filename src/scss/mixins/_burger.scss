@@ -1,8 +1,8 @@
 /* stylelint-disable */
 
 @mixin burger {
-  --burger-width: 30px;
-  --burger-height: 30px;
+  --burger-width: 24px;
+  --burger-height: 24px;
   --burger-line-height: 2px;
 
   position: relative;
@@ -10,7 +10,7 @@
   padding: 0;
   width: var(--burger-width);
   height: var(--burger-height);
-  color: #000;
+  color: var(--green);
   background-color: transparent;
   cursor: pointer;
 
@@ -27,10 +27,12 @@
 
   &::before {
     top: 0;
+    width: 10px;
   }
 
   &::after {
     top: calc(100% - var(--burger-line-height));
+    width: 14px;
   }
 
   &__line {
@@ -46,12 +48,14 @@
 
   &--active {
     &::before {
+      width: 100%;
       top: 50%;
       transform: rotate(45deg);
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     }
 
     &::after {
+      width: 100%;
       top: 50%;
       transform: rotate(-45deg);
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;

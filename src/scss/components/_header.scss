@@ -21,6 +21,11 @@
   &__list {
     display: flex;
     gap: 20px;
+    @include mobile {
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
   }
 
   &__item {
@@ -46,6 +51,27 @@
     &:active {
       color: var(--black);
     }
+    @include mobile {
+      color: var(--white);
+    }
+  }
+
+  @include mobile {
+    margin-top: 50px;
+    padding: 80px;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
+    backdrop-filter: blur(6px);
+    background-color: var(--green);
+    border-radius: 0 0 12px 12px;
+    visibility: hidden;
+    overflow: hidden;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in;
   }
 }
 
@@ -79,4 +105,20 @@
       transition: all 0.3s ease-in-out;
     }
   }
+  @include mobile {
+    display: none;
+  }
+}
+.burger {
+  display: none;
+  @include mobile {
+    @include burger;
+    display: block;
+    z-index: 3000;
+  }
+}
+.nav.menu--active {
+  visibility: visible;
+  transform: none;
+  z-index: 2000;
 }

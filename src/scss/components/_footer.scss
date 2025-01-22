@@ -31,18 +31,9 @@
     }
   }
 
-  &__img {
-  }
-
-  &__nav {
-  }
-
   &__nav-list {
     display: flex;
     gap: 20px;
-  }
-
-  &__nav-item {
   }
 
   &__nav-link {
@@ -68,9 +59,6 @@
     &:active {
       color: var(--black);
     }
-  }
-
-  &__info {
   }
 
   &__tel {
