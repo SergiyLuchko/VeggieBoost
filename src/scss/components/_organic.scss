@@ -8,7 +8,6 @@
 
   &__text {
     max-width: 600px;
-
     margin: 0;
     margin: 0 auto 40px auto;
     font-weight: 400;
@@ -18,21 +17,25 @@
     text-align: center;
   }
 
-  &__content {
-  }
-
   &__list {
     margin-bottom: 44px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
     gap: 24px;
+    @include tablet {
+      grid-template-columns: repeat(auto-fill, minmax(342px, 1fr));
+    }
   }
 
   &__item {
     display: flex;
+    justify-content: center;
     padding: 64px 34px 24px 34px;
     border-radius: 20px;
     background-color: var(--light-green);
+    @include small-tablet {
+      padding: 40px 18px 20px 18px;
+    }
   }
 
   &__link {
@@ -117,7 +120,7 @@
     border-radius: 50%;
     background-color: var(--orange);
     font-weight: 500;
-    font-size: 1.125rem;
+    font-size: clamp(0.875rem, 0.7861rem + 0.4444vw, 1.125rem);
     line-height: 133%;
     transform: rotate(-14deg);
     text-transform: uppercase;
@@ -139,6 +142,10 @@
     &:active {
       transform: scale(0.95);
       transition: all 0.3s ease-in-out;
+    }
+    @include mobile {
+      width: 80px;
+      height: 80px;
     }
   }
   &__btn-icon {

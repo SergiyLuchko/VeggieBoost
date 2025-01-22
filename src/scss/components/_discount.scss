@@ -1,7 +1,5 @@
 .discount {
   margin-bottom: var(--sect-offset);
-  &__content {
-  }
 }
 
 .marquee {
@@ -9,7 +7,7 @@
   white-space: nowrap;
 
   font-weight: 500;
-  font-size: 40px;
+  font-size: clamp(1.5rem, 1.1444rem + 1.7778vw, 2.5rem);
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #f9f7f4;
