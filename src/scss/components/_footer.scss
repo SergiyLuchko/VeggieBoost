@@ -29,18 +29,35 @@
   }
 
   &__nav-link {
+    padding: 5px 10px;
     font-weight: 400;
     font-size: 14px;
     line-height: 129%;
     letter-spacing: -0.04em;
     text-align: center;
     color: var(--black);
+    transition: all 0.3s ease-in-out;
+    @include hover {
+      background-color: var(--orange);
+      color: var(--white);
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 2px solid var(--green);
+      outline-offset: 2px;
+    }
+    &:active {
+      color: var(--black);
+    }
   }
 
   &__info {
   }
 
   &__tel {
+    padding: 8px;
     display: inline-block;
     margin-bottom: 20px;
     font-weight: 400;
@@ -48,6 +65,21 @@
     line-height: 133%;
     text-transform: uppercase;
     color: var(--black);
+    transition: all 0.3s ease-in-out;
+    @include hover {
+      background-color: var(--orange);
+      color: var(--white);
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 2px solid var(--green);
+      outline-offset: 2px;
+    }
+    &:active {
+      color: var(--black);
+    }
   }
 
   &__address {
@@ -70,26 +102,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--black);
-    border-radius: 10px;
-    padding: 8px;
-    width: 44px;
-    height: 44px;
   }
 
   &__link {
+    transition: all 0.3s ease-in-out;
+
     &::after {
       content: "";
       position: absolute;
       position: absolute;
       inset: 0;
     }
-  }
-
-  &__icon {
-    width: 24px;
-    height: 24px;
-    stroke: var(--black);
-    fill: var(--black);
+    &:hover svg rect {
+      transition: all 0.3s ease-in-out;
+      stroke: var(--green);
+    }
+    &:hover svg path {
+      transition: all 0.3s ease-in-out;
+      fill: var(--green);
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      border-radius: 8px;
+      outline: 2px solid var(--green);
+      outline-offset: 2px;
+    }
+    &:active {
+      transform: scale(0.95);
+    }
   }
 }

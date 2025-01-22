@@ -13,6 +13,7 @@
   }
 
   &__cart {
+    padding: 5px;
   }
 }
 
@@ -26,12 +27,56 @@
   }
 
   &__link {
+    padding: 5px 10px;
     line-height: 129%;
     color: var(--black);
+    transition: all 0.3s ease-in-out;
+    @include hover {
+      background-color: var(--orange);
+      color: var(--white);
+      transform: scale(1.05);
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 2px solid var(--green);
+      outline-offset: 2px;
+    }
+    &:active {
+      color: var(--black);
+    }
   }
 }
 
 .cart {
   &__btn {
+    padding: 5px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+
+    @include hover {
+      border-radius: 50%;
+      background-color: var(--orange);
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      border-radius: 50%;
+      outline: 2px solid var(--gray);
+      outline-offset: 2px;
+    }
+    &:active {
+      transform: scale(0.95);
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover svg path {
+      fill: var(--white);
+      stroke: var(--white);
+      transition: all 0.3s ease-in-out;
+    }
   }
 }

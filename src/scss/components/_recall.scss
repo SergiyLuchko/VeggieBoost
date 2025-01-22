@@ -37,6 +37,13 @@
       letter-spacing: -0.04em;
       color: #c1bdbd;
     }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 2px solid var(--green);
+      // outline-offset: 2px;
+    }
   }
 
   &__btn {
@@ -54,6 +61,22 @@
     text-transform: capitalize;
     color: var(--white);
     background-color: var(--orange);
+    transition: all 0.3s;
+    @include hover {
+      width: 120px;
+      background-color: var(--green);
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 2px solid var(--green);
+      outline-offset: 2px;
+    }
+    &:active {
+      transform: scale(0.95);
+      color: var(--black);
+    }
   }
 
   &__image {

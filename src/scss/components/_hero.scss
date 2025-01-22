@@ -75,6 +75,23 @@
     text-transform: uppercase;
     text-align: center;
     color: var(--orange);
+    transition: all 0.3s ease-in-out;
+    @include hover {
+      background-color: var(--orange);
+      color: var(--white);
+      transform: rotate(0deg) scale(1.05);
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 2px solid var(--gray);
+      outline-offset: 2px;
+    }
+    &:active {
+      transform: scale(0.95);
+      transition: all 0.3s ease-in-out;
+    }
   }
 
   &__image {
@@ -102,5 +119,22 @@
     text-align: center;
     text-transform: uppercase;
     color: #f9f7f4;
+    transition: all 0.3s ease-in-out;
+    @include hover {
+      background-color: #f9f7f4;
+      color: var(--black);
+      transform: scale(1.05);
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 2px solid var(--gray);
+      outline-offset: 2px;
+    }
+    &:active {
+      transform: scale(0.95);
+      transition: all 0.3s ease-in-out;
+    }
   }
 }
