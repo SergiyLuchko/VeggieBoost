@@ -1,10 +1,15 @@
 .footer {
-  padding: 80px 32px;
+  padding: 80px 0;
   background-color: var(--light-green);
   &__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
   }
 
   &__image {
@@ -12,6 +17,18 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 130px;
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    @include mobile {
+      justify-content: center;
+    }
   }
 
   &__img {
@@ -59,7 +76,7 @@
   &__tel {
     padding: 8px;
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 133%;
