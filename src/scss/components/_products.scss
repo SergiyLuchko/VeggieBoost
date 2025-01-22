@@ -11,14 +11,24 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-  }
-
-  &__image {
+    @include tablet {
+      padding: 40px 80px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+    @include mobile {
+      padding: 80px 20px;
+    }
   }
 
   &__title {
     margin: 0;
     max-width: 437px;
+    @include tablet {
+      text-align: center;
+      max-width: 544px;
+    }
   }
 
   &__green,
