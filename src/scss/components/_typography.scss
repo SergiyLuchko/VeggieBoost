@@ -6,7 +6,7 @@
 .heading-1 {
   @extend %heading;
   font-weight: 500;
-  font-size: 40px;
+  font-size: clamp(1.5rem, 1.1444rem + 1.7778vw, 2.5rem);
   line-height: 110%;
   text-transform: uppercase;
 }
