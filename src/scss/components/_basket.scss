@@ -2,13 +2,18 @@
   margin-bottom: var(--sect-offset);
   background-color: var(--white);
   color: var(--black);
-  &__content {
-  }
 
   &__title-box {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 30px;
+    @include small-tablet {
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
   }
 
   &__title {
@@ -16,10 +21,13 @@
     margin: 0;
     margin-bottom: 40px;
     font-weight: 500;
-    font-size: 48px;
+    font-size: clamp(1.75rem, 1.4833rem + 1.3333vw, 2.5rem);
     line-height: 104%;
     letter-spacing: -0.04em;
     text-transform: uppercase;
+    @include small-tablet {
+      margin-bottom: 0;
+    }
   }
 
   &__descr {
@@ -27,13 +35,24 @@
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    @include small-tablet {
+      gap: 20px;
+      justify-content: center;
+    }
+    @include mobile {
+      flex-wrap: wrap;
+    }
   }
 
   &__text {
+    margin: 0;
     max-width: 353px;
     font-size: 18px;
     line-height: 133%;
   }
-}
-.container {
+  &__img {
+    @include tablet {
+      max-width: 310px;
+    }
+  }
 }
