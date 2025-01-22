@@ -4,15 +4,29 @@
     display: flex;
     align-items: center;
     gap: 77px;
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 80px;
+      justify-content: center;
+      @include mobile {
+        gap: 40px;
+      }
+    }
   }
 
   &__action {
     max-width: 609px;
+    @include tablet {
+      text-align: center;
+    }
   }
 
   &__title {
     margin: 0;
     margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
@@ -21,10 +35,16 @@
     margin-bottom: 80px;
     font-size: 18px;
     line-height: 133%;
+    @include tablet {
+      margin: 0 auto;
+      margin-bottom: 40px;
+      text-align: center;
+      max-width: 499px;
+    }
   }
 
   &__input {
-    padding: 15px 15px 15px 24px;
+    padding: 15px 105px 15px 24px;
     border: 1px solid rgba($color: #141414, $alpha: 0.3);
     border-radius: 100px;
     width: 350px;
@@ -44,9 +64,13 @@
       outline: 2px solid var(--green);
       // outline-offset: 2px;
     }
+    @include mobile {
+      width: 80%;
+    }
   }
 
   &__btn {
+    border: 1px solid transparent;
     position: relative;
     z-index: 10;
     margin-left: -100px;
@@ -86,8 +110,5 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-  }
-
-  &__img {
   }
 }
