@@ -3,7 +3,7 @@
 }
 
 .marquee {
-  overflow: hidden;
+  overflow-y: visible;
   white-space: nowrap;
 
   font-weight: 500;
@@ -13,7 +13,7 @@
   color: #f9f7f4;
   &__item {
     display: block;
-    padding: 30px 0;
+    padding: 15px 0;
     span {
       font-style: italic;
       font-weight: 400;
@@ -31,8 +31,13 @@
   }
   &__text {
     margin: 0;
+    white-space: nowrap;
     animation: marquee 40s linear infinite;
     animation-delay: -20s;
+    animation-direction: reverse;
+    &--green {
+      animation-direction: initial;
+    }
   }
 }
 @keyframes marquee {

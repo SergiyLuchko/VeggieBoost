@@ -35,7 +35,7 @@
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: #444; /* Цвет ползунка при наведении */
+    background: var(--beige); /* Цвет ползунка при наведении */
   }
 
   /* Для Firefox */
@@ -202,6 +202,22 @@
     border-radius: 100px;
     padding: 15px 35px;
     background-color: var(--orange);
+    transition: all 0.3s ease-in-out;
+
+    @include hover {
+      background-color: var(--green);
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 2px solid var(--green);
+      outline-offset: 2px;
+    }
+    &:active {
+      transform: scale(0.95);
+      color: var(--black);
+    }
   }
   @include tablet {
     width: 80%;
