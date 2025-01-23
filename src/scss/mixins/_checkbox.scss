@@ -17,9 +17,10 @@
       position: absolute;
       left: 0;
       top: 0;
-      border: 1px solid #000;
-      width: 15px;
-      height: 15px;
+      border: 1.5px solid var(--green);
+      border-radius: 4px;
+      width: 20px;
+      height: 20px;
       box-sizing: border-box;
     }
 
@@ -28,10 +29,11 @@
       position: absolute;
       left: 0;
       top: 0;
-      width: 15px;
-      height: 15px;
+      width: 20px;
+      height: 20px;
+
       box-sizing: border-box;
-      background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='fi_32282' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='405.272px' height='405.272px' viewBox='0 0 405.272 405.272' style='enable-background:new 0 0 405.272 405.272;' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M393.401,124.425L179.603,338.208c-15.832,15.835-41.514,15.835-57.361,0L11.878,227.836 c-15.838-15.835-15.838-41.52,0-57.358c15.841-15.841,41.521-15.841,57.355-0.006l81.698,81.699L336.037,67.064 c15.841-15.841,41.523-15.829,57.358,0C409.23,82.902,409.23,108.578,393.401,124.425z'%3E%3C/path%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.53778 0.351145C6.78571 -0.0145518 7.28316 -0.110021 7.64885 0.13791C8.01455 0.38584 8.11002 0.883284 7.86209 1.24898L3.52319 7.64885C3.20584 8.11694 2.51623 8.11694 2.19888 7.64885L0.13791 4.60892C-0.110021 4.24323 -0.0145518 3.74578 0.351145 3.49785C0.716843 3.24992 1.21429 3.34539 1.46222 3.71109L2.86104 5.77434L6.53778 0.351145Z' fill='%23A1C487'/%3e%3c/svg%3e ");
       background-position: center;
       background-size: 10px 10px;
       background-repeat: no-repeat;
@@ -46,7 +48,7 @@
 }
 
 .custom-checkbox__field:focus + .custom-checkbox__content::before {
-  outline: 2px solid #f00;
+  outline: 2px solid var(--green);
   outline-offset: 2px;
 }
 

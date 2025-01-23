@@ -1,0 +1,212 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  // margin-top: 100px;
+  overflow-y: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  padding-bottom: 0;
+  border-radius: 20px;
+  max-width: 891px;
+  max-height: 90vh;
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.01), 0 0 18px 0 rgba(0, 0, 0, 0.02),
+    0 0 36px 0 rgba(0, 0, 0, 0.03), 0 0 71px 0 rgba(0, 0, 0, 0.03),
+    0 0 131px 0 rgba(0, 0, 0, 0.04), 0 0 223px 0 rgba(0, 0, 0, 0.05);
+  color: var(--black);
+  background: var(--white);
+
+  /* Для Webkit-браузеров (Chrome, Safari, Edge) */
+  &::-webkit-scrollbar {
+    width: 10px; /* Ширина скроллбара */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #e0e0e0; /* Цвет фона трека */
+    border-radius: 5px; /* Закругление углов трека */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: aqua; /* Цвет ползунка */
+    border-radius: 5px; /* Закругление углов ползунка */
+    border: 2px solid #e0e0e0; /* Рамка вокруг ползунка */
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #444; /* Цвет ползунка при наведении */
+  }
+
+  /* Для Firefox */
+  & {
+    scrollbar-width: thin; /* Ширина скроллбара */
+    scrollbar-color: var(--green) var(--orange); /* Цвет ползунка и трека */
+  }
+
+  &--active {
+    display: block;
+  }
+
+  @include small-tablet {
+    padding: 20px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    text-shadow: 0 4px 70px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &__list {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 20px;
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 7px;
+    background-color: var(--beige);
+    border-radius: 20px;
+    @include mobile {
+      flex-direction: row;
+    }
+  }
+
+  &__check {
+    margin-left: auto;
+    margin-bottom: 4px;
+    @include mobile {
+      order: 1;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: clamp(1.125rem, 0.9917rem + 0.6667vw, 1.5rem);
+    line-height: 117%;
+    letter-spacing: -0.04em;
+  }
+
+  &__item-text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.02em;
+  }
+
+  &__item-img {
+    @include tablet {
+      max-width: 172px;
+    }
+    @include mobile {
+      margin-left: auto;
+      max-width: 94px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 40px;
+    @include tablet {
+      gap: 14px;
+    }
+  }
+
+  &__bottom-image {
+    align-self: flex-end;
+    @include small-tablet {
+      display: none;
+    }
+  }
+}
+
+.custom-checkbox {
+  @include custom-checkbox;
+}
+.form {
+  padding-bottom: 40px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  &__group {
+    position: relative;
+  }
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.04em;
+    color: rgba(20, 20, 20, 0.5);
+  }
+
+  &__input {
+    width: 100%;
+    padding: 15px 24px;
+    border: 1px solid rgba(20, 20, 20, 0.2);
+    border-radius: 100px;
+  }
+  &__input:focus + &__label,
+  &__input:valid + &__label {
+    transform: translateY(-175%);
+    z-index: 10;
+    background-color: #fff;
+  }
+
+  &__textarea {
+    width: 100%;
+    border: 1px solid rgba(20, 20, 20, 0.2);
+    border-radius: 20px;
+    min-height: 145px;
+    resize: none;
+  }
+  &__textarea + &__label {
+    top: 15px;
+  }
+  &__textarea:focus + &__label,
+  &__textarea:valid + &__label {
+    transform: translateY(-25px);
+    z-index: 10;
+    background-color: #fff;
+  }
+  &__btn {
+    align-self: start;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.04em;
+    text-transform: capitalize;
+    color: var(--white);
+    border-radius: 100px;
+    padding: 15px 35px;
+    background-color: var(--orange);
+  }
+  @include tablet {
+    width: 80%;
+  }
+  @include small-tablet {
+    width: 100%;
+  }
+}
