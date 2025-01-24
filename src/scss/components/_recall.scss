@@ -1,13 +1,16 @@
 .recall {
   margin-bottom: var(--sect-offset);
+
   &__content {
     display: flex;
     align-items: center;
     gap: 77px;
+
     @include tablet {
       flex-wrap: wrap;
-      gap: 80px;
       justify-content: center;
+      gap: 80px;
+
       @include mobile {
         gap: 40px;
       }
@@ -16,6 +19,7 @@
 
   &__action {
     max-width: 609px;
+
     @include tablet {
       text-align: center;
     }
@@ -24,32 +28,35 @@
   &__title {
     margin: 0;
     margin-bottom: 40px;
+
     @include tablet {
       margin-bottom: 20px;
     }
   }
 
   &__text {
-    max-width: 523px;
     margin: 0;
     margin-bottom: 80px;
+    max-width: 523px;
     font-size: 18px;
     line-height: 133%;
+
     @include tablet {
       margin: 0 auto;
       margin-bottom: 40px;
-      text-align: center;
       max-width: 499px;
+      text-align: center;
     }
   }
 
   &__input {
-    padding: 15px 105px 15px 24px;
     border: 1px solid rgba($color: #141414, $alpha: 0.3);
     border-radius: 100px;
+    padding: 15px 105px 15px 24px;
     width: 350px;
     height: 48px;
     color: var(--black);
+
     &::placeholder {
       font-weight: 400;
       font-size: 14px;
@@ -57,23 +64,27 @@
       letter-spacing: -0.04em;
       color: #c1bdbd;
     }
+
     &:focus {
       outline: none;
     }
+
     &:focus-visible {
       outline: 2px solid var(--green);
+
       // outline-offset: 2px;
     }
+
     @include mobile {
       width: 80%;
     }
   }
 
   &__btn {
-    border: 1px solid transparent;
     position: relative;
     z-index: 10;
     margin-left: -100px;
+    border: 1px solid transparent;
     border-radius: 100px;
     padding: 15px 35px;
     width: 105px;
@@ -86,29 +97,33 @@
     color: var(--white);
     background-color: var(--orange);
     transition: all 0.3s;
+
     @include hover {
       width: 120px;
       background-color: var(--green);
     }
+
     &:focus {
       outline: none;
     }
+
     &:focus-visible {
       outline: 2px solid var(--green);
       outline-offset: 2px;
     }
+
     &:active {
-      transform: scale(0.95);
       color: var(--black);
+      transform: scale(0.95);
     }
   }
 
   &__image {
     border-radius: 80px;
-    background-color: var(--light-green);
     background-image: url("../img/steps-bg.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: var(--light-green);
   }
 }

@@ -1,15 +1,15 @@
 .modal {
-  display: none;
   position: fixed;
+  left: 50%;
+  top: 50%;
   z-index: 100;
+  display: none;
+
   // margin-top: 100px;
   overflow-y: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  border-radius: 20px;
   padding: 40px;
   padding-bottom: 0;
-  border-radius: 20px;
   max-width: 891px;
   max-height: 90vh;
   box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.01), 0 0 18px 0 rgba(0, 0, 0, 0.02),
@@ -17,6 +17,12 @@
     0 0 131px 0 rgba(0, 0, 0, 0.04), 0 0 223px 0 rgba(0, 0, 0, 0.05);
   color: var(--black);
   background: var(--white);
+  transform: translate(-50%, -50%);
+
+  /* Для Firefox */
+
+  scrollbar-color: var(--green) var(--orange); /* Цвет ползунка и трека */
+  scrollbar-width: thin; /* Ширина скроллбара */
 
   /* Для Webkit-браузеров (Chrome, Safari, Edge) */
   &::-webkit-scrollbar {
@@ -24,24 +30,18 @@
   }
 
   &::-webkit-scrollbar-track {
-    background: #e0e0e0; /* Цвет фона трека */
     border-radius: 5px; /* Закругление углов трека */
+    background: #e0e0e0; /* Цвет фона трека */
   }
 
   &::-webkit-scrollbar-thumb {
-    background: aqua; /* Цвет ползунка */
-    border-radius: 5px; /* Закругление углов ползунка */
     border: 2px solid #e0e0e0; /* Рамка вокруг ползунка */
+    border-radius: 5px; /* Закругление углов ползунка */
+    background: #e0e0e0; /* Цвет ползунка */
   }
 
   &::-webkit-scrollbar-thumb:hover {
     background: var(--beige); /* Цвет ползунка при наведении */
-  }
-
-  /* Для Firefox */
-  & {
-    scrollbar-width: thin; /* Ширина скроллбара */
-    scrollbar-color: var(--green) var(--orange); /* Цвет ползунка и трека */
   }
 
   &--active {
@@ -54,8 +54,8 @@
 
   &__close {
     position: absolute;
-    top: 20px;
     right: 20px;
+    top: 20px;
   }
 
   &__title {
@@ -65,9 +65,10 @@
   }
 
   &__list {
-    margin-bottom: 40px;
     display: flex;
+    margin-bottom: 40px;
     gap: 20px;
+
     @include mobile {
       flex-direction: column;
     }
@@ -76,17 +77,19 @@
   &__item {
     display: flex;
     flex-direction: column;
+    border-radius: 20px;
     padding: 14px 7px;
     background-color: var(--beige);
-    border-radius: 20px;
+
     @include mobile {
       flex-direction: row;
     }
   }
 
   &__check {
-    margin-left: auto;
     margin-bottom: 4px;
+    margin-left: auto;
+
     @include mobile {
       order: 1;
     }
@@ -113,6 +116,7 @@
     @include tablet {
       max-width: 172px;
     }
+
     @include mobile {
       margin-left: auto;
       max-width: 94px;
@@ -122,6 +126,7 @@
   &__bottom {
     display: flex;
     gap: 40px;
+
     @include tablet {
       gap: 14px;
     }
@@ -129,6 +134,7 @@
 
   &__bottom-image {
     align-self: flex-end;
+
     @include small-tablet {
       display: none;
     }
@@ -138,11 +144,12 @@
 .custom-checkbox {
   @include custom-checkbox;
 }
+
 .form {
-  padding-bottom: 40px;
-  width: 50%;
   display: flex;
   flex-direction: column;
+  padding-bottom: 40px;
+  width: 50%;
   gap: 14px;
 
   &__group {
@@ -151,77 +158,86 @@
 
   &__label {
     position: absolute;
-    top: 50%;
     left: 24px;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease-in-out;
+    top: 50%;
     font-weight: 400;
     font-size: 14px;
     line-height: 129%;
     letter-spacing: -0.04em;
     color: rgba(20, 20, 20, 0.5);
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
   }
 
   &__input {
-    width: 100%;
-    padding: 15px 24px;
     border: 1px solid rgba(20, 20, 20, 0.2);
     border-radius: 100px;
+    padding: 15px 24px;
+    width: 100%;
   }
+
   &__input:focus + &__label,
   &__input:valid + &__label {
-    transform: translateY(-175%);
     z-index: 10;
     background-color: #fff;
+    transform: translateY(-175%);
   }
 
   &__textarea {
-    width: 100%;
     border: 1px solid rgba(20, 20, 20, 0.2);
     border-radius: 20px;
+    width: 100%;
     min-height: 145px;
     resize: none;
   }
+
   &__textarea + &__label {
     top: 15px;
   }
+
   &__textarea:focus + &__label,
   &__textarea:valid + &__label {
-    transform: translateY(-25px);
     z-index: 10;
     background-color: #fff;
+    transform: translateY(-25px);
   }
+
   &__btn {
     align-self: start;
+    border-radius: 100px;
+    padding: 15px 35px;
     font-weight: 400;
     font-size: 14px;
     line-height: 129%;
     letter-spacing: -0.04em;
     text-transform: capitalize;
     color: var(--white);
-    border-radius: 100px;
-    padding: 15px 35px;
     background-color: var(--orange);
     transition: all 0.3s ease-in-out;
 
     @include hover {
       background-color: var(--green);
     }
+
     &:focus {
       outline: none;
     }
+
     &:focus-visible {
       outline: 2px solid var(--green);
       outline-offset: 2px;
     }
+
     &:active {
-      transform: scale(0.95);
       color: var(--black);
+      transform: scale(0.95);
     }
   }
+
   @include tablet {
     width: 80%;
   }
+
   @include small-tablet {
     width: 100%;
   }

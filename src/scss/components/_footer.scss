@@ -1,10 +1,12 @@
 .footer {
   padding: 80px 0;
   background-color: var(--light-green);
+
   &__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     @include mobile {
       flex-wrap: wrap;
       justify-content: center;
@@ -18,14 +20,17 @@
     align-items: center;
     gap: 20px;
   }
+
   &__box {
     display: flex;
     align-items: center;
     gap: 130px;
+
     @include tablet {
       flex-wrap: wrap;
       gap: 40px;
     }
+
     @include mobile {
       justify-content: center;
     }
@@ -45,43 +50,51 @@
     text-align: center;
     color: var(--black);
     transition: all 0.3s ease-in-out;
+
     @include hover {
-      background-color: var(--orange);
       color: var(--white);
+      background-color: var(--orange);
     }
+
     &:focus {
       outline: none;
     }
+
     &:focus-visible {
       outline: 2px solid var(--green);
       outline-offset: 2px;
     }
+
     &:active {
       color: var(--black);
     }
   }
 
   &__tel {
-    padding: 8px;
     display: inline-block;
     margin-bottom: 12px;
+    padding: 8px;
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 133%;
     text-transform: uppercase;
     color: var(--black);
     transition: all 0.3s ease-in-out;
+
     @include hover {
-      background-color: var(--orange);
       color: var(--white);
+      background-color: var(--orange);
     }
+
     &:focus {
       outline: none;
     }
+
     &:focus-visible {
       outline: 2px solid var(--green);
       outline-offset: 2px;
     }
+
     &:active {
       color: var(--black);
     }
@@ -98,10 +111,11 @@
 }
 
 .social {
-  margin-bottom: 40px;
   display: flex;
   align-items: center;
+  margin-bottom: 40px;
   gap: 20px;
+
   &__item {
     position: relative;
     display: flex;
@@ -115,25 +129,29 @@
     &::after {
       content: "";
       position: absolute;
-      position: absolute;
       inset: 0;
     }
+
     &:hover svg rect {
-      transition: all 0.3s ease-in-out;
       stroke: var(--green);
-    }
-    &:hover svg path {
       transition: all 0.3s ease-in-out;
-      fill: var(--green);
     }
+
+    &:hover svg path {
+      fill: var(--green);
+      transition: all 0.3s ease-in-out;
+    }
+
     &:focus {
       outline: none;
     }
+
     &:focus-visible {
-      border-radius: 8px;
       outline: 2px solid var(--green);
       outline-offset: 2px;
+      border-radius: 8px;
     }
+
     &:active {
       transform: scale(0.95);
     }

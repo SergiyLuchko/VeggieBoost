@@ -16,16 +16,16 @@
   min-width: 360px;
   min-height: 100%;
   font-size: 0.875rem;
-  letter-spacing: -0.04em;
   line-height: 100%;
+  letter-spacing: -0.04em;
   color: var(--black);
 }
 
 img {
+  display: block;
   height: auto;
   max-width: 100%;
   object-fit: cover;
-  display: block;
 }
 
 a {
@@ -102,6 +102,7 @@ a {
 .page--ios .dis-scroll {
   position: relative;
 }
+
 .container-half-left {
   padding-right: calc(
     (100% - var(--container-width)) / 2 + (var(--container-width) / 2)
@@ -120,11 +121,11 @@ a {
 }
 
 .container-half-right {
-  padding-left: calc(
-    (100% - var(--container-width)) / 2 + (var(--container-width) / 2)
-  );
   padding-right: calc(
     (100% - var(--container-width)) / 2 + var(--container-offset)
+  );
+  padding-left: calc(
+    (100% - var(--container-width)) / 2 + (var(--container-width) / 2)
   );
 
   @include tablet {

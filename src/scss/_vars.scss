@@ -5,7 +5,6 @@
   --content-width: 1190px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-
   --sect-offset: 124px;
 
   // colors
@@ -16,9 +15,11 @@
   --beige: #faf3e7;
   --gray: #f3f3f3;
   --white: #fff;
+
   @include tablet {
     --sect-offset: 100px;
   }
+
   @include mobile {
     --sect-offset: 80px;
   }

@@ -1,5 +1,6 @@
 .header {
   padding: 16px 0;
+
   &__inner {
     display: flex;
     align-items: center;
@@ -19,10 +20,11 @@
   &__list {
     display: flex;
     gap: 20px;
+
     @include mobile {
       flex-direction: column;
-      gap: 16px;
       align-items: center;
+      gap: 16px;
     }
   }
 
@@ -31,73 +33,82 @@
     line-height: 129%;
     color: var(--black);
     transition: all 0.3s ease-in-out;
+
     @include hover {
-      background-color: var(--orange);
       color: var(--white);
+      background-color: var(--orange);
       transform: scale(1.05);
     }
+
     &:focus {
       outline: none;
     }
+
     &:focus-visible {
       outline: 2px solid var(--green);
       outline-offset: 2px;
     }
+
     &:active {
       color: var(--black);
     }
+
     @include mobile {
       color: var(--white);
     }
   }
 
   @include mobile {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2000;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    margin-top: 50px;
-    padding: 80px;
-    height: 100vh;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 2000;
-    backdrop-filter: blur(6px);
-    background-color: var(--green);
-    border-radius: 0 0 12px 12px;
-    visibility: hidden;
     overflow: hidden;
+    margin-top: 50px;
+    border-radius: 0 0 12px 12px;
+    padding: 80px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--green);
+    visibility: hidden;
     transform: translateY(-100%);
     transition: all 0.5s ease-in;
+    backdrop-filter: blur(6px);
   }
 }
 
 .cart {
   &__btn {
-    padding: 5px 8px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5px 8px;
     transition: all 0.3s ease-in-out;
 
     @include hover {
       border-radius: 50%;
       background-color: var(--orange);
     }
+
     &:focus {
       outline: none;
     }
+
     &:focus-visible {
-      border-radius: 50%;
       outline: 2px solid var(--gray);
       outline-offset: 2px;
+      border-radius: 50%;
     }
+
     &:active {
       transform: scale(0.95);
       transition: all 0.3s ease-in-out;
     }
+
     @include hover {
       svg path {
         stroke: var(--white);
@@ -105,23 +116,29 @@
       }
     }
   }
+
   @include mobile {
     svg path {
       stroke: var(--white);
     }
+
     order: 1;
   }
 }
+
 .burger {
   display: none;
+
   @include mobile {
     @include burger;
-    display: block;
+
     z-index: 3000;
+    display: block;
   }
 }
+
 .nav.menu--active {
+  z-index: 2000;
   visibility: visible;
   transform: none;
-  z-index: 2000;
 }

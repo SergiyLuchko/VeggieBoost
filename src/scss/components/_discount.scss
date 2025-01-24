@@ -4,19 +4,20 @@
 
 .marquee {
   overflow-y: visible;
-  white-space: nowrap;
-
   font-weight: 500;
   font-size: clamp(1.5rem, 1.1444rem + 1.7778vw, 2.5rem);
   line-height: 120%;
   letter-spacing: -0.02em;
+  white-space: nowrap;
   color: #f9f7f4;
+
   &__item {
     display: block;
     padding: 15px 0;
+
     span {
-      font-style: italic;
       font-weight: 400;
+      font-style: italic;
     }
   }
 
@@ -29,21 +30,25 @@
     background: var(--green);
     transform: rotate(-2deg);
   }
+
   &__text {
     margin: 0;
     white-space: nowrap;
     animation: marquee 40s linear infinite;
     animation-delay: -20s;
     animation-direction: reverse;
+
     &--green {
       animation-direction: initial;
     }
   }
 }
+
 @keyframes marquee {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
